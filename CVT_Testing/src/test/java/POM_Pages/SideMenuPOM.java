@@ -20,6 +20,9 @@ public class SideMenuPOM {
 	public WebElement ManageResources;
 	@FindBy(xpath="//li[@class='ng-star-inserted']//a[@title='Manage Locations']")
 	public WebElement ManageLocations;
+	@FindBy()
+	WebElement 1;
+	
 	
 	
 	
