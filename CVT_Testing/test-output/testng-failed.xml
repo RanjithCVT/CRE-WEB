@@ -6,8 +6,8 @@
       <class name="RunnableClass.TC_001">
         <methods>
           <include name="Closure"/>
+          <include name="StoreHoursVerification"/>
           <include name="Startup"/>
-          <include name="Janitorial_Creattion"/>
         </methods>
       </class> <!-- RunnableClass.TC_001 -->
     </classes>
