@@ -61,6 +61,26 @@ public class StoreHoursVerificationClass {
 			System.out.println("Row Count =" + rowCount);
 			System.out.println("Column Count =" + Columncount);
 
+			public static String getCellValue(Cell cell) {
+		        if (cell == null) {
+		            return "";
+		        }
+		        switch (cell.getCellType()) {
+		            case STRING:
+		                return cell.getStringCellValue(); // Return the string value directly
+		            case NUMERIC:
+		                if (DateUtil.isCellDateFormatted(cell)) {
+		                    // Handle time formatted as a date
+		                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+		                    return timeFormat.format(cell.getDateCellValue());
+		                } else {
+		                    return String.valueOf(cell.getNumericCellValue());
+		                }
+		            default:
+		                return "";
+		        }
+		    }
+
 			for (int i = 0; i < rowCount; i++) {
 				for (int j = 0; j < Columncount; j++) {
 					Row row = sheet.getRow(i);
