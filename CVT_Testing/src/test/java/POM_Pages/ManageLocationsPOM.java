@@ -13,10 +13,29 @@ public class ManageLocationsPOM {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
+//	@FindBy(xpath="//div[@class='col-md-3 mt-3 ng-star-inserted']//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple']")
+//	WebElement SubmitButton;
 	
-	@FindBy(xpath = "div[@class='col-md-3 mt-3 ng-star-inserted']//span[text()='Submit']")
+	/*	@FindBy(xpath="")
+		WebElement 1;
+		
+	 	*/  
+	
+	
+	
+	@FindBy(xpath="//input[@name='storeId']")
+	public WebElement LocationID;
+	@FindBy(xpath="//mat-select[@name='company']")
+	public WebElement ClientDropdown ; 
+	@FindBy(xpath = "//div[@class='col-md-3 mt-3 ng-star-inserted']//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple']")
 	public WebElement SubmitButton;
-	//
+	@FindBy(xpath="//div[@class='col-md-3 mt-3 ng-star-inserted']//span[text()='Clear']")
+	public WebElement ClearButton;	
+	@FindBy(xpath="(//a[@title='View'])[1]")
+	public WebElement LocationView;
+	 
+	
+	
 	
 	
 	

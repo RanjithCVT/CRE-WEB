@@ -25,7 +25,7 @@ public class Janitorial {
 		LoginClass login = new LoginClass();
 		SideMenuPOM side = new SideMenuPOM(driver);
 		JanitorialPOM jani = new JanitorialPOM(driver);
-		side.ManageResources.click();
+		//side.ManageResources.click();
 		wait.until((ExpectedConditions.visibilityOf(jani.AddNewResource)));
 		jani.AddNewResource.click();
 		wait.until(ExpectedConditions.visibilityOf(jani.Firstname));

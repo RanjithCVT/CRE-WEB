@@ -2,8 +2,8 @@ package RunnableClass;
 
 import org.testng.annotations.Test;
 
-import TestClass.Janitorial;
 import TestClass.LoginClass;
+import TestClass.StoreHoursVerificationClass;
 
 public class TC_001 extends BaseClass {
 
@@ -23,5 +23,12 @@ public class TC_001 extends BaseClass {
 //		jani.Janitorial_Creation();
 //
 //	}
+
+	@Test
+	public void StoreHoursVerification() {
+		StoreHoursVerificationClass storehoursvfy = new StoreHoursVerificationClass(driver, wait, extent);
+		storehoursvfy.StoreHoursVerify();
+
+	}
 
 }

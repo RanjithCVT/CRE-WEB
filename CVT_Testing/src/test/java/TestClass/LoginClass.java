@@ -28,9 +28,10 @@ public class LoginClass {
 	public LoginClass(WebDriver driver, WebDriverWait wait, ExtentReports extent) {
 		this.driver = driver;
 		this.extent = extent;
+		this.wait = wait;
 		log = new Login_POM(driver);
 		dash = new DashboardPOM(driver);
-		this.wait = wait;
+		
 
 	}
 	public LoginClass() {
