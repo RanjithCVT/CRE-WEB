@@ -48,53 +48,53 @@ public class StoreHoursVerificationClass {
 //		wait.until(ExpectedConditions.visibilityOf(locDetails.LocationHeader));
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		js.executeScript("arguments[0].scrollIntoView(true);", locDetails.HoursTable);
-		try {
-			FileInputStream fis = new FileInputStream(
-					System.getProperty("user.dir") + "//TestData//Store Hours verification sheet.xlsx");
-			XSSFWorkbook wb = new XSSFWorkbook(fis);
-			XSSFSheet sheet = wb.getSheetAt(0);
-
-			Row row1 = sheet.getRow(1);
-			int Columncount = row1.getLastCellNum();
-			int rowCount = sheet.getLastRowNum();
-
-			System.out.println("Row Count =" + rowCount);
-			System.out.println("Column Count =" + Columncount);
-
-			public static String getCellValue(Cell cell) {
-		        if (cell == null) {
-		            return "";
-		        }
-		        switch (cell.getCellType()) {
-		            case STRING:
-		                return cell.getStringCellValue(); // Return the string value directly
-		            case NUMERIC:
-		                if (DateUtil.isCellDateFormatted(cell)) {
-		                    // Handle time formatted as a date
-		                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
-		                    return timeFormat.format(cell.getDateCellValue());
-		                } else {
-		                    return String.valueOf(cell.getNumericCellValue());
-		                }
-		            default:
-		                return "";
-		        }
-		    }
-
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < Columncount; j++) {
-					Row row = sheet.getRow(i);
-					String cell= row.getCell(j).toString();
-					System.out.println(cell);
-				}
-
-			}
-
-		}
-
-		catch (Exception e) {
-
-		}
+//		try {
+//			FileInputStream fis = new FileInputStream(
+//					System.getProperty("user.dir") + "//TestData//Store Hours verification sheet.xlsx");
+//			XSSFWorkbook wb = new XSSFWorkbook(fis);
+//			XSSFSheet sheet = wb.getSheetAt(0);
+//
+//			Row row1 = sheet.getRow(1);
+//			int Columncount = row1.getLastCellNum();
+//			int rowCount = sheet.getLastRowNum();
+//
+//			System.out.println("Row Count =" + rowCount);
+//			System.out.println("Column Count =" + Columncount);
+//
+//			public static String getCellValue(Cell cell) {
+//		        if (cell == null) {
+//		            return "";
+//		        }
+//		        switch (cell.getCellType()) {
+//		            case STRING:
+//		                return cell.getStringCellValue(); // Return the string value directly
+//		            case NUMERIC:
+//		                if (DateUtil.isCellDateFormatted(cell)) {
+//		                    // Handle time formatted as a date
+//		                    SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+//		                    return timeFormat.format(cell.getDateCellValue());
+//		                } else {
+//		                    return String.valueOf(cell.getNumericCellValue());
+//		                }
+//		            default:
+//		                return "";
+//		        }
+//		    }
+//
+//			for (int i = 0; i < rowCount; i++) {
+//				for (int j = 0; j < Columncount; j++) {
+//					Row row = sheet.getRow(i);
+//					String cell= row.getCell(j).toString();
+//					System.out.println(cell);
+//				}
+//
+//			}
+//
+//		}
+//
+//		catch (Exception e) {
+//
+//		}
 
 	}
 

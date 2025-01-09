@@ -14,14 +14,14 @@ public class SideMenuPOM {
 		this.driver = driver;
 	}
 
-	/*	@FindBy(xpath="")
-	WebElement 1;   */
-	
-	@FindBy(xpath="//li[@class='ng-star-inserted']//a[@title='Manage Locations']")
+	/*
+	 * @FindBy(xpath="") WebElement 1;
+	 */
+
+	@FindBy(xpath = "//li[@class='ng-star-inserted']//a[@title='Manage Locations']")
 	public WebElement ManageLocations;
-	
-	
-	
-	
-	
+
+	@FindBy(xpath = "//li[@class='ng-star-inserted']//a[@title='Work Orders']")
+	public WebElement WorkOrders;
+
 }
