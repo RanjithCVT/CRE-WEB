@@ -37,13 +37,13 @@ public class Work_Order_POM {
 	  public WebElement SelectLocationDropdown;
 	 @FindBy(xpath="//span[text()='Select Contractor']")
 	  public WebElement SelectContractor_Dropdown;
-	 @FindBy(xpath="//input[@data-mat-calendar='mat-datepicker-2']")
+	 @FindBy(xpath="//mat-label[contains(text(), 'Expiration Date')]")
 	  public WebElement ExpirationDatePicker;
 	 @FindBy(xpath="//div[@class='mat-calendar-content']")
 	  public WebElement Calendar_View;
 	 @FindBy(xpath="//button[@type='button']//span[text()=' 30 ']")
 	  public WebElement Date_in_Calendar;
-	 @FindBy(xpath="(//span[text()='Next'])[2]")
+	 @FindBy(xpath="//div[@class='w100 text-center mt25']//span[text()='Next']")
 	  public WebElement Next_button_Final;
 	 @FindBy(xpath="//span[text()='Ross Dress For Less']")
 	  public WebElement Client_name;
@@ -51,11 +51,20 @@ public class Work_Order_POM {
 	  public WebElement SearchLocation_Textbox;
 	 @FindBy(xpath="(//mat-option[@role='option'])[2]")
 	  public WebElement LocationID_Option;
-	 @FindBy(xpath="//mat-option[@role='option']//span[text()='Complete Cleaning Service (Demo)']")
+	 @FindBy(xpath="//div[@role='listbox']//mat-option[@role='option'][2]")
 	  public WebElement ContractorName_Dropdown;
 	 @FindBy(xpath="//span[text()='Submit']")
 	  public WebElement Final_SubmitButton;
 	 
+	 
+	 // Workorder Details Page :
+	 @FindBy(xpath="//div[@class='top_section']")
+	  public WebElement WorkorderTopSection;
+	 
+	 @FindBy(xpath="//div[@class='top_section']//h2")
+	  public WebElement WorkOrderNumber;
+	 
+	
 	
 	 
 	 

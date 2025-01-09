@@ -6,7 +6,7 @@
       <class name="RunnableClass.TC_001">
         <methods>
           <include name="Closure"/>
-          <include name="StoreHoursVerification"/>
+          <include name="AddNewWorkOrder"/>
           <include name="Startup"/>
         </methods>
       </class> <!-- RunnableClass.TC_001 -->
