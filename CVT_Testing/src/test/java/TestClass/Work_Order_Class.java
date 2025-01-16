@@ -47,7 +47,7 @@ public class Work_Order_Class {
 		workorder.ContractorName_Dropdown.click();
 		wait.until(ExpectedConditions.elementToBeClickable(workorder.ExpirationDatePicker));
 		workorder.ExpirationDatePicker.click();
-		wait.until(ExpectedConditions.elementToBeClickable(workorder.Calendar_View));
+		//wait.until(ExpectedConditions.elementToBeClickable(workorder.Calendar_View));
 		wait.until(ExpectedConditions.elementToBeClickable(workorder.Date_in_Calendar));
 		workorder.Date_in_Calendar.click();
 		wait.until(ExpectedConditions.invisibilityOf(workorder.Calendar_View));
