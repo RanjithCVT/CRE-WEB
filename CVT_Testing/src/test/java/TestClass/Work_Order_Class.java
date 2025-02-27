@@ -62,6 +62,6 @@ public class Work_Order_Class {
 		String WO_Number=Workorder_Detail.substring(index+1);
 		System.out.println("This is the Created Workorder Number :"+WO_Number);
 		
-	}
+	} // Here Workorder is completed 
 
 }
